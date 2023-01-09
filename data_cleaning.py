@@ -80,11 +80,9 @@ def save_participants_and_messages(dir):
 
 
 if __name__ == "__main__":
-    save_participants_and_messages('.\original_data\ptp_original')
-    save_participants_and_messages('.\original_data\zoo_original')
-    # Save for testing purposes
-    # print(get_root_name(get_last_folder_name('.\ptp_original')))
-    # print(get_root_name(get_last_folder_name('.\zoo_original')))
+    for file in os.listdir(r'.\original_data'):
+        save_participants_and_messages(r'.\original_data' + '\\' + file)
+
 
 
 
